@@ -44,7 +44,7 @@ git log --oneline --graph --all
 
 ## Delete merged and pushed branch topic/demo_gh just to be sure will not commit on it
 ## Push master branch
-git push origin master
+git push -u origin master
 ## First tag it for reference
 git tag demo_gh1 topic/demo_gh
 ## Delete local branch 
