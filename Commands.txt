@@ -2,7 +2,9 @@
 git branch topic/demo_gh
 git checkout topic/demo_gh 
 
-##vim command to run automatically after same :w (commits the change of current file with git diff in commit mesage)
+##vim test7.txt command to run automatically, after some :w (commits the change of current file with git diff in commit mesage)
+## Change 1 line, add 1 line, dele 1 line in the file test7.txt
+## :w - save the file, do it 3 times, it will create 3 commits
 :autocmd BufWritePost * !git commit -m "`git diff -U0 % | tail -1`" %
 
 ##View the auto-command with:
@@ -11,11 +13,11 @@ git checkout topic/demo_gh
 ##And remove all auto-commands from the previous with:
 :autocmd! BufWritePost *
 
-## Log with diff with only change 
-git log -c -U0 --pretty="format:%H"
+## Log with diff with only change, Hash and refs 
+git log -c -U0 --pretty="format:%H%d"
 
 ## set alias for git log with diff
-git config --global --add alias.ld log -c -U0 --pretty="format:%H"
+git config --global --add alias.ld log -c -U0 --pretty="format:%H%d"
 
 ## Reset to "working" commit
 git reset --hard 9e73c8948a1b7b6630d7eee9546238edb96cc147
