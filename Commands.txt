@@ -7,6 +7,9 @@ git checkout topic/demo_gh
 ## :w - save the file, do it 3 times, it will create 3 commits
 :autocmd BufWritePost * !git commit -m "`git diff -U0 % | tail -1`" %
 
+## Tag important commit (working commits) after several commits
+git tag working1 
+
 ##View the auto-command with:
 :autocmd BufWritePost *
 
