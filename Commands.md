@@ -1,10 +1,14 @@
 ## Work with local feature branches (topics)
 git branch topic/demo_gh
 git checkout topic/demo_gh 
+git log  - to show initial status
 
 ## Edit test7.txt command to run automatically, after save (commits the change of current file with git diff in commit mesage)
-## Change 1 line, add 1 line, dele 1 line in the file test7.txt
-## Save the file, do it 3 times, it will create 3 commits
+## Change 1 line - save
+## Add 1 line - save
+## Delete 1 line - save
+## In the file test7.txt
+## It will create 3 commits
 
 ## Tag important commit (working commits) after several commits
 git tag working1 
