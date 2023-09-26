@@ -1,3 +1,7 @@
+## We will work on this demo project
+ 
+https://github.com/ilyaro/git_best_practices_demo
+
 ## Work with local feature branches (topics)
 git branch topic/demo_gh
 git checkout topic/demo_gh 
