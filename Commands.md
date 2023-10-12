@@ -57,3 +57,35 @@ git tag demo_gh1 topic/demo_gh
 git branch -D topic/demo_gh
 ## See log again
 git log --oneline --graph --all
+
+
+
+
+It is best to do it at the beginning of feature branch development, stable changes, or finish of development  
+
+## To rebase on origin/master branch need first to fetch it
+## It can be done when you check out at the feature branch:
+
+mbp:create_odo_site_app ilyaro$ git status
+On branch feature/HCDEVOPS-2262-create-odo-mgmt-apps
+Your branch is up to date with 'origin/feature/HCDEVOPS-2262-create-odo-mgmt-apps'.
+ 
+## Before rebasing best practice (but not must) to squash your commits, run git log --oneline and see the commit your feature branch based on or origin/master 
+mbp:create_odo_site_app ilyaro$ git log --onelineilyaro-mbp:create_odo_site_app ilyaro$ git reset --soft origin/master
+mbp:create_odo_site_app ilyaro$ git status
+On branch feature/HCDEVOPS-2262-create-odo-mgmt-apps
+Changes to be committed:
+modified: deploy_regular_apps.sh
+new file: tenantid-0a70802b-f614-4ff3-aae9-a2df4d561169/db_Harmony-Connect-AP-PRD-prod-ap-db.json
+new file: tenantid-0a70802b-f614-4ff3-aae9-a2df4d561169/db_Harmony-Connect-AP-PRD-prod-ap-db_replica.json
+ 
+## Now commit (To squash all your commits to 1 commit)
+mbp:create_odo_site_app ilyaro$ git commit -m "Adding AP DB"
+[feature/HCDEVOPS-2262-create-odo-mgmt-apps 11c079e] Adding AP DB
+ 
+### Now fetch all branches including masterilyaro-mbp:create_odo_site_app ilyaro$ git fetch
+From bitbucket.org:adanite/cp-all-demo
+   b921d22..fa3d1b6  master     -> origin/master
+ 
+## Now rebase on top of origin/master
+mbp:create_odo_site_app ilyaro$ git rebase origin/master
