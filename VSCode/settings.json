@@ -3,7 +3,7 @@
 	"commands": [
 		{
             "match": ".*",
-			"cmd": "git commit -m 'autocommit' ${file} & git push origin"
+			"cmd": "git commit -m 'autocommit' ${file} && git push"
 		}
 	]
     }
