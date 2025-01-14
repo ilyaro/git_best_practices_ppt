@@ -22,10 +22,11 @@ From here: Always delete merged branch on Git server (If you need the commits of
 
 ```bash
 ## Before you start working on a new feature/bugfix remove all merged branches from your repo
-git checkout feat/CLOIS-9356-aks-cp-authorization
-git tag MERGED_feat_CLOIS-9356-aks-cp-authorization
+git checkout feat/JIRA-777-cp-authorization
+## Use tag only when you really need it not always
+git tag MERGED_feat_JIRA-777-cp-authorization
 git push --tags
-git push origin --delete feat/CLOIS-9356-aks-cp-authorization
+git push origin --delete feat/JIRA-777-cp-authorization
 git-bd
 ```
 
@@ -33,6 +34,6 @@ git-bd
 ## Start work with the creation of a new feature branch and tag its base commit
 ## When you start development in new branch from fetched origin/main - default branch:
 git fetch origin main
-git checkout -b feat/CLOIS-9356-aks-cp-authorization origin/main && git tag BASE_feat_CLOIS-9356-aks-cp-authorization
-git push origin BASE_feat_CLOIS-9356-aks-cp-authorization
+git checkout -b feat/JIRA-777-cp-authorization origin/main && git tag BASE_feat_JIRA-777-cp-authorization
+git push origin BASE_feat_JIRA-777-cp-authorization
 ```
