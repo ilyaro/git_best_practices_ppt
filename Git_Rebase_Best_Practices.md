@@ -4,14 +4,13 @@ Git Rebase Best practices
 ##First let us squash all or part of commits in my feature branch only to 1 commit, before rebase
 $ git checkout feat/HCDEVOPS-777-rebase-demo
 
-##Reset my feat branch back to point to origin/main and --soft means leave all files I committed in working tree in modified state in index(stage) ready for commit
-## Or reset the feat branch from commit it cameout/branched (For this important to git tag such commit ahead in branch creation time:
-git checkout -b feat/JIRA-777-rebase-demo && git tag  BASE-feat-JIRA-777-rebase-demo )  
+# Find common ancestor of main and feature branch
+git merge-base main feature-branch
 
-$ git reset --soft origin/main
-Or 
-$ git reset --soft BASE-feat-JIRA-777-rebase-demo
-$ git reset --soft origin/main
+## You will get the base commit SHA1 (Example)
+shsdudhsuyagsudbg21324
+
+$ git reset --soft shsdudhsuyagsudbg21324
 
 $ git commit -m "My awsome feature done"
 
