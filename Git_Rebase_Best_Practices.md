@@ -8,6 +8,7 @@ $ git checkout feat/HCDEVOPS-777-rebase-demo
 git merge-base main feature-branch
 
 ## You will get the base commit SHA1 (Example)
+## The commit you created your branch feat/HCDEVOPS-777-rebase-demo from
 shsdudhsuyagsudbg21324
 
 $ git reset --soft shsdudhsuyagsudbg21324
