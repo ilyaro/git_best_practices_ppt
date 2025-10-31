@@ -21,26 +21,26 @@ $ git commit -m "rebase demo: 1 commit squash of all work in branch"
 ## See all the changes before pushing them
 $ git log -p
 
-## Fetch default branch commits from remote repo
+## Fetch default branch commits from the remote repo
 $ git fetch origin main
 
 ## Rebase on origin/main 
-## Only 1 commit will be rebased, otherwise all commits in the branch will be rebased 1 by 1 on origin/main (It may be 50 commits to rebase, including 50 conflict resolutions)
+## Only 1 commit will be rebased, otherwise all commits in the branch will be rebased 1 by 1 on origin/main (It may be 50 commits to rebase, including 50 conflict resolutions!!!)
 $ git rebase origin/main
 
-## Solve conflicts if they exist, just open the conflict file in the IDE or editor
+## Solve the conflicts if they exist, just open the conflict file in the IDE or editor
 ## Add the file to the index (stage) to set the conflicts resolved!
 $ git add <Conflict file>
 
 ## Now continue with rebase
 $ git rebase --continue
 
-## On any stage in rebase run: git status, to see status of the rebase
+## On any stage in the rebase run: git status, to see the status of the rebase
 $ git status
 
 ## Push your 1 rebased commit for review, you must use --force-with-lease with push to your feature branch only
 ### As parent commit of your commit was changed, --force-with-lease better than --force as if remote branch changed do not let you override it
-##Need to pull it first   
+## Need to pull first, if ($ git push --force-with-lease) fails   
 $ git push --force-with-lease origin
 ```
 
