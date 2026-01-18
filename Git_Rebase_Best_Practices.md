@@ -79,4 +79,4 @@ $ git push --force-with-lease origin
 git fetch --prune; git reset --soft $(git merge-base HEAD origin/HEAD) && git commit && git rebase origin/HEAD && git push --force-with-lease
 ```
 
-[Full schema of rebase work](Git_Squash_Rebase-BP.svg)
+[Full schema of rebase work](Git_Squash_Rebase_BP.svg)
