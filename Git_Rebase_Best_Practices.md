@@ -48,7 +48,7 @@ $ git fetch --prune
 ## Only 1 commit will be rebased, otherwise all commits in the branch will be rebased 1 by 1 on origin/main (It may be 50 commits to rebase, including 50 conflict resolutions!!!)
 ```
 $ git rebase origin/main
-Or simpler
+# Or simpler
 $ git rebase origin/HEAD
 ```
 
